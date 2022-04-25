@@ -1,0 +1,57 @@
+
+public class User {
+	private String fname,lname,email,gender,password,country;
+	private Integer age,contact;
+	public String getFname() {
+		return fname;
+	}
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+	public Integer getContact() {
+		return contact;
+	}
+	public void setContact(Integer contact) {
+		this.contact = contact;
+	}
+	public User(String fname2, String lname2, String email2, Integer age2, String gender2, Integer contact2, String password2, String country2) {
+		super();
+	}
+	\
+}

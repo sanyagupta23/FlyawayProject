@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<div class="head">
+<h1>FlayAway</h1>
+</div>
+
+<div class ="Register-box">
+<div>Register Here</h1>
+
+</div>
+<br> 
+<form action="RegisterServlet" method="post">
+<!--  Enter FirstName: <input type=" text"  name="fname" required="required"><br> 
+Enter LastName: <input type=" text"  name="lname" required="required"><br> 
+Enter Email: <input type=" email"  name="email" required="required"><br> 
+Enter Age: <input type="number"  name="age" required="required"><br> 
+Enter gender: <input type="radio"  name="gender" value="male" required="required">
+              <input type="radio"  name="gender" value="female" required="required"><br> 
+Enter Contact Number: <input type=" number"  name="contact" required="required"><br> 
+Enter Password: <input type=" password"  name="password" required="required"><br> 
+Enter Country: <input type="text"  name="country" required="required"><br> 
+<button>submit</button>
+</form>
+
+</div>
+</center> -->
+<tr><td>User Name: </td><td><input type="text" name="uname"></td></tr>
+<tr><td>Password: </td><td><input type="password" name="password"></td></tr>
+<tr><td>Email: </td><td><input type="text" name="email"></td></tr>
+<tr><td>phone: </td><td><input type="text" name="phone"></td></tr>
+</body>
+</html>

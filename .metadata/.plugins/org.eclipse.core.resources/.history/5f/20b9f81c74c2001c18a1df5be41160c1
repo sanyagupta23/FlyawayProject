@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="head">
+	<h1>FlyAway</h1>
+</div>
+<div class="register-box">
+	<div>
+	<h2><center><u>Register here</u></center></h2>
+	</div>
+	<div>
+		<form action="Register" method="post">
+			<label style="padding-right: 60px;">Enter Email : </label><input type="email" name="email" required="required"><br>
+			<label style="padding-right: 30px;">Enter First Name :</label><input type="text" name="fname" required="required"><br>
+			<label style="padding-right: 30px;">Enter Last Name : </label><input type="text" name="lname" required="required"><br>
+			<label style="padding-right: 75px;">Enter Age : </label><input type="number" name="age" maxlength="2" required="required">	<br>
+			<label>Enter Mobile Number : </label><input type="text" name="contact" maxlength="10" required="required"><br>
+			<label style="padding-right: 80px;">Gender : </label><span><input type="radio" name="gender" value="female">Female
+				    	<input type="radio" name="gender" value="Male">Male</span><br/>
+		    <label style="padding-right: 80px;">Password : </label><input type="password" name="password"><br/>
+			<label style="padding-right: 85px;">Country : </label><input type="text" name="country" required="required"><br>
+			
+			<center><button type="submit">Register</button>		    <button type="reset">Clear</button>	</center>
+						
+		</form>
+	</div>
+</div>
+</body>
+</html>

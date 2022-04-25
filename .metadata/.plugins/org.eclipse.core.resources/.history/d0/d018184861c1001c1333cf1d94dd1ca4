@@ -1,0 +1,80 @@
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/RegisterServlet")
+public class RegisterServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+   
+    Connection connection;
+    PreparedStatement pstmt;
+    
+    public void dbinit() {
+    	String url="jdbc:mysql://localhost:3306/flyaway";
+    	String username = "root";
+    	String password= "root";
+    	
+    	try {
+    		Class.forName("com.mysql.cj.jdbc.Driver");
+    		connection=DriverManager.getConnection(url,username,password);		
+    	}catch (Exception e) {
+			System.out.println("Some error occured");
+		
+		}
+     }
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter out = response.getWriter();
+		
+		try {
+			String First_Name = request.getParameter("fname");
+			String Last_Name = request.getParameter("lname");
+			String Email = request.getParameter("email");
+			Integer Age = Integer.parseInt("age");
+			String gender = request.getParameter("gender");
+			Integer Contact_number = Integer.parseInt("contact");
+			String Password = request.getParameter("password");
+			String Country = request.getParameter("country");
+			 dbinit();
+			 
+			 String sqlquery = "insert into registration values(?,?,?,?,?,?,?,?)";
+			 PreparedStatement pstmt = connection.prepareStatement(sqlquery);
+			 pstmt = connection.prepareStatement(sqlquery);
+			       
+			 pstmt.setString(1, First_Name);
+			 pstmt.setString(2, Last_Name);
+			 pstmt.setString(3, Email);
+			 pstmt.setInt(4, Age);
+			 pstmt.setString(5, gender);
+			 pstmt.setInt(6, Contact_number);
+			 pstmt.setString(7, Password);
+			 pstmt.setString(8, Country);
+			 
+			 pstmt.executeUpdate();
+			 out.print("registration successful");
+			// HttpSession httpsession=request.getSession();
+			 //if
+			
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("something went wrong");
+		}
+	}
+
+}
