@@ -1,0 +1,30 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class RegisterDao {
+private String dburl="jdbc:mysql://localhost:3306/flyaway";
+private String dbuname="root";
+private String dbpassword="root";
+private String dbdriver = "com.mysql.jdbc.Driver";
+
+public Connection getConnection() 
+{
+	
+	Connection con =null;
+	try {
+	DriverManager.getConnection(dburl,dbuname,dbpassword);
+	
+}catch (Exception e) {
+	// TODO: handle exception
+	e.printStackTrace();
+}
+	return con;
+}
+
+public String insert(User user) {
+	Connection con =getConnection();
+	
+	return null;
+	
+}
+}
